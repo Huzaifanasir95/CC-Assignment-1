@@ -1,0 +1,28 @@
+// Variable Declarations
+int c = 100;        
+decimal v = 123.45678;  // Should trigger an error (more than 5 decimal places)
+bool f = true;          
+char l = 'a';         
+
+// Arithmetic Operations
+int s = c + 50;     
+int d = c - 30;    
+decimal p = v * 2;   
+decimal q = v / 2;   
+int m = c % 3;
+int i = 2^3;         // Should be evaluated as 8
+decimal j = v^2; // Should be evaluated properly
+int a =4;
+// Spacing Handling
+   int    o    =     42   ;  // Extra spaces should be ignored
+{
+    int y = x + 3;
+}
+/*
+    This is a multi-line comment.
+    It includes extra spaces, blank lines, and even symbols.
+    The lexer should properly ignore all of this.
+*/
+
+// Identifier Naming Rule Violation
+int Invalid = 5;  // Should trigger an error (uppercase letter in identifier)
